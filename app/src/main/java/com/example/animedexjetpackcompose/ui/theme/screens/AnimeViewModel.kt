@@ -20,7 +20,7 @@ class AnimeViewModel @Inject constructor(
     private fun getAnimePhotos() {
         viewModelScope.launch {
             try {
-                val result = repository.getAnimeList()
+                val result = repository.getAnimeList(20)
                 Resource.Success("Images loaded: $result")
             } catch (error: Exception) {
                 Resource.Error("Something went wrong")
