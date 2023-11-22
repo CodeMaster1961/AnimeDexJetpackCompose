@@ -46,8 +46,6 @@ data class Family(
     val grandfather: String,
     @SerializedName("grandmother ")
     val grandmother: String,
-    @SerializedName("grandmother")
-    val grandmother: String,
     @SerializedName("grandson")
     val grandson: String,
     @SerializedName("granduncle")
