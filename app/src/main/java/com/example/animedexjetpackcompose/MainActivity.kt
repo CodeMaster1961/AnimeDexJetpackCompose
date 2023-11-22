@@ -16,6 +16,7 @@ import androidx.navigation.compose.composable
 import androidx.navigation.compose.rememberNavController
 import androidx.navigation.navArgument
 import com.example.animedexjetpackcompose.ui.theme.AnimeDexJetpackComposeTheme
+import com.example.animedexjetpackcompose.ui.theme.screens.AnimeListScreen
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
@@ -32,7 +33,7 @@ class MainActivity : ComponentActivity() {
                     val navController = rememberNavController()
                     NavHost(navController = navController, startDestination = "anime_list_screen") {
                         composable("anime_list_screen") {
-
+                            AnimeListScreen(navController = navController)
                         }
                         composable(
                             "anime_detail_screen/{animeName}",
